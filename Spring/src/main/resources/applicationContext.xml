@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xmlns:p="http://www.springframework.org/schema/p"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
+
+<!--    <bean id="userDao" class="com.Christp.dao.impl.UserDaoImpl">-->
+<!--        <property name="username" value="法外狂徒"/>-->
+<!--        <property name="age" value="18"/>-->
+<!--    </bean>-->
+    <bean id="user01" class="com.Christp.domain.User">
+        <property name="name" value="张三"/>
+        <property name="addr" value="人才市场"/>
+    </bean>
+
+    <bean id="user02" class="com.Christp.domain.User">
+        <property name="name" value="Joker"/>
+        <property name="addr" value="人才市场"/>
+    </bean>
+
+    <bean id="userDao" class="com.Christp.dao.impl.UserDaoImpl">
+        <property name="strlist">
+            <list>
+                <value>你</value>
+                <value>好</value>
+                <value>帅</value>
+            </list>
+        </property>
+        <property name="userMap">
+            <map>
+                <entry key="user01" value-ref="user01"/>
+                <entry key="user02" value-ref="user02"/>
+            </map>
+        </property>
+        <property name="properties">
+            <props>
+                <prop key="p1">111</prop>
+                <prop key="p2">222</prop>
+                <prop key="p3">333</prop>
+                <prop key="p4">444</prop>
+            </props>
+        </property>
+    </bean>
+<!-- 引用注入
+        <bean id="userService" class="com.Christp.service.impl.UserServiceImpl">-->
+<!--        <property name="userDao" ref="userDao"/>-->
+<!--    </bean>-->
+
+<!-- p方法注入
+<bean id="userService" class="com.Christp.service.impl.UserServiceImpl" p:userDao-ref="userDao"/>-->
+    <bean id="userService" class="com.Christp.service.impl.UserServiceImpl">
+        <constructor-arg ref="userDao" name="userDao">
+
+        </constructor-arg>
+    </bean>
+
+    <!-- 做引用 -->
+    <import resource="applicationContext-user.xml"/>
+</beans>

@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="CompilerConfiguration">
+    <annotationProcessing>
+      <profile name="Maven default annotation processors profile" enabled="true">
+        <sourceOutputDir name="target/generated-sources/annotations" />
+        <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
+        <outputRelativeToContentRoot value="true" />
+        <module name="itheima_spring_mvc" />
+        <module name="untitled" />
+        <module name="Chirsitp_Mybatis _dao" />
+        <module name="DruidTest01" />
+        <module name="Spring_anno" />
+        <module name="Spring_mvc" />
+        <module name="Christp_Mybatis_anno" />
+        <module name="Chirsitp_Mybatis" />
+        <module name="Christp_Mybatis_multi" />
+      </profile>
+    </annotationProcessing>
+    <bytecodeTargetLevel>
+      <module name="Chirsitp_Mybatis" target="16" />
+      <module name="Chirsitp_Mybatis _dao" target="16" />
+      <module name="Christp_Mybatis_anno" target="16" />
+      <module name="Christp_Mybatis_multi" target="16" />
+      <module name="demo" target="1.8" />
+      <module name="DruidTest01" target="16" />
+      <module name="itheima_spring_mvc" target="16" />
+      <module name="Spring_anno" target="16" />
+      <module name="Spring_Mvc" target="6" />
+      <module name="Spring_mvc" target="16" />
+      <module name="untitled" target="16" />
+    </bytecodeTargetLevel>
+  </component>
+</project>

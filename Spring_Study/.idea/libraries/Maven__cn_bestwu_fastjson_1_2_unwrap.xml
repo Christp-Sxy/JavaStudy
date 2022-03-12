@@ -1,0 +1,13 @@
+<component name="libraryTable">
+  <library name="Maven: cn.bestwu:fastjson:1.2-unwrap">
+    <CLASSES>
+      <root url="jar://$PROJECT_DIR$/../../../maven/repository/cn/bestwu/fastjson/1.2-unwrap/fastjson-1.2-unwrap.jar!/" />
+    </CLASSES>
+    <JAVADOC>
+      <root url="jar://$PROJECT_DIR$/../../../maven/repository/cn/bestwu/fastjson/1.2-unwrap/fastjson-1.2-unwrap-javadoc.jar!/" />
+    </JAVADOC>
+    <SOURCES>
+      <root url="jar://$PROJECT_DIR$/../../../maven/repository/cn/bestwu/fastjson/1.2-unwrap/fastjson-1.2-unwrap-sources.jar!/" />
+    </SOURCES>
+  </library>
+</component>

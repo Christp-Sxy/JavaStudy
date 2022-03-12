@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE configuration
+        PUBLIC "-//mybatis.org//DTD Config 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-config.dtd">
+<configuration>
+
+<!--    通过外部的properties标签加载外部的properties文件-->
+    <properties resource="jdbc1.properties"/>
+
+    <!--    自定义别名-->
+    <!--
+    顺序错误
+    ### Cause: org.apache.ibatis.builder.BuilderException: Error creating document instance.  Cause: org.xml.sax.SAXParseException; lineNumber: 34; columnNumber: 17; 元素类型为 "configuration" 的内容必须匹配 "(properties?,settings?,typeAliases?,typeHandlers?,objectFactory?,objectWrapperFactory?,reflectorFactory?,plugins?,environments?,databaseIdProvider?,mappers?)"。
+    -->
+    <typeAliases>
+        <typeAlias type="com.Christp.com.domain.User" alias="user"/>
+        <typeAlias type="com.Christp.com.domain.Order" alias="order"/>
+        <typeAlias type="com.Christp.com.domain.Info" alias="info"/>
+        <typeAlias type="com.Christp.com.domain.Users" alias="users"/>
+        <typeAlias type="com.Christp.com.domain.Role" alias="role"/>
+    </typeAliases>
+
+<!--
+    注册类型处理器
+    <typeHandlers>
+        <typeHandler handler="com.Chtsitp.handler.Date.TypeHandler"/>
+    </typeHandlers>
+-->
+
+
+<!--    配置数据源的环境-->
+    <environments default="development">
+        <environment id="development">
+            <transactionManager type="JDBC"/>
+            <dataSource type="POOLED">
+                <property name="driver" value="${jdbc.driver}"/>
+                <property name="url" value="${jdbc.url}"/>
+                <property name="username" value="${jdbc.username}"/>
+                <property name="password" value="${jdbc.password}"/>
+
+            </dataSource>
+        </environment>
+    </environments>
+
+<!--    加载映射文件-->
+    <mappers>
+        <mapper resource="com.Christp.mapper/OrderMapper.xml"/>
+        <mapper resource="com.Christp.mapper/UserMapper.xml"/>
+    </mappers>
+
+</configuration>

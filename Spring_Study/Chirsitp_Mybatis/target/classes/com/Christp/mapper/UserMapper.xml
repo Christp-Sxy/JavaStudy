@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<!--<mapper namespace="userMapper">-->
+<mapper namespace="com.Chtsitp.dao.UserMapper">
+<!--    提取sql语句-->
+    <sql id="selectUser">select * from user</sql>
+
+
+
+<!--    插入操作-->
+    <insert id="save" parameterType="user">
+        insert into user values(#{id}, #{username}, #{password})
+    </insert>
+
+<!--    删除操作-->
+    <delete id="delete" parameterType="java.lang.Integer">
+        /*当参数类型只有一个时，大括号里写什么都可以*/
+        delete from user where id=#{id}
+    </delete>
+
+<!--    修改操作-->
+    <update id="update" parameterType="user">
+        update user set username=#{username},password=#{password} where id=#{id}
+    </update>
+    
+<!--    查询操作-->
+    <select id="findAll" resultType="user">
+        select * from user
+    </select>
+
+    <select id="findByCondition" parameterType="user" resultType="user">
+        <include refid="selectUser"/>
+        <where>
+            <if test="id!=null">
+                and id=#{id}
+            </if>
+            <if test="username!=null">
+                and username=#{username}
+            </if>
+            <if test="password!=null">
+                and password=#{password}
+            </if>
+        </where>
+    </select>
+
+    <!--
+    collection:数据类型
+    open:语句开始写什么
+    item:语句中间写什么
+    close:语句结束写什么
+    separator:用什么分割
+    -->
+    <select id="findByIds" parameterType="list" resultType="user">
+        select * from user
+        <where>
+            <foreach collection="list" open="id in(" close=")" item="id" separator=",">#{id}</foreach>
+        </where>
+    </select>
+</mapper>

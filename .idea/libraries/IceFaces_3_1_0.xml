@@ -1,0 +1,33 @@
+<component name="libraryTable">
+  <library name="IceFaces-3.1.0" type="jsf-icefaces">
+    <properties version="3.1.0" />
+    <CLASSES>
+      <root url="jar://$PROJECT_DIR$/JSP/lib/commons-digester.jar!/" />
+      <root url="jar://$PROJECT_DIR$/JSP/lib/el-api.jar!/" />
+      <root url="jar://$PROJECT_DIR$/JSP/lib/icepush.jar!/" />
+      <root url="jar://$PROJECT_DIR$/JSP/lib/el-api-2.2.1-b03.jar!/" />
+      <root url="jar://$PROJECT_DIR$/JSP/lib/commons-collections.jar!/" />
+      <root url="jar://$PROJECT_DIR$/JSP/lib/krysalis-jCharts-1.0.0-alpha-1.jar!/" />
+      <root url="jar://$PROJECT_DIR$/JSP/lib/commons-beanutils.jar!/" />
+      <root url="jar://$PROJECT_DIR$/JSP/lib/commons-logging.jar!/" />
+      <root url="jar://$PROJECT_DIR$/JSP/lib/jxl.jar!/" />
+      <root url="jar://$PROJECT_DIR$/JSP/lib/icefaces.jar!/" />
+      <root url="jar://$PROJECT_DIR$/JSP/lib/portletfaces-bridge-2.0.2-ice-7875.jar!/" />
+      <root url="jar://$PROJECT_DIR$/JSP/lib/FastInfoset.jar!/" />
+      <root url="jar://$PROJECT_DIR$/JSP/lib/icefaces-ace.jar!/" />
+      <root url="jar://$PROJECT_DIR$/JSP/lib/javax.annotation.jar!/" />
+      <root url="jar://$PROJECT_DIR$/JSP/lib/icefaces-compat.jar!/" />
+      <root url="jar://$PROJECT_DIR$/JSP/lib/poi-3.7.jar!/" />
+      <root url="jar://$PROJECT_DIR$/JSP/lib/jstl.jar!/" />
+      <root url="jar://$PROJECT_DIR$/JSP/lib/javax.servlet.jsp.jar!/" />
+      <root url="file://$PROJECT_DIR$/JSP/lib/ApacheLICENSE-2.0.txt" />
+      <root url="jar://$PROJECT_DIR$/JSP/lib/javax.servlet.jar!/" />
+      <root url="file://$PROJECT_DIR$/JSP/lib/NOTICE.txt" />
+      <root url="jar://$PROJECT_DIR$/JSP/lib/portlet2-api.jar!/" />
+      <root url="file://$PROJECT_DIR$/JSP/lib/CDDL-1.0.txt" />
+      <root url="file://$PROJECT_DIR$/JSP/lib/MIT-LICENSE.txt" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES />
+  </library>
+</component>
