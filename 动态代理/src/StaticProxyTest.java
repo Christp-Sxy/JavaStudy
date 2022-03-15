@@ -1,7 +1,3 @@
-import org.junit.Test;
-
-import java.util.Properties;
-
 /**
  * @author Christp
  * @version 1.0
