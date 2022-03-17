@@ -13,7 +13,7 @@ import java.util.List;
  */
 public class DAOTest {
     @Test
-    public void test1(){
+    public void test1() {
         CustomerDAO dao1 = new CustomerDAO();
 
         dao1.add(new Customer());

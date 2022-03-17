@@ -66,8 +66,8 @@ public class MapperTest {
         //设置分页相关的参数  当前页和每页的条数
         PageHelper.startPage(1, 3);
         List<User> userList = mapper.findAll();
-        for (User user:
-             userList) {
+        for (User user :
+                userList) {
             System.out.println(user);
         }
 

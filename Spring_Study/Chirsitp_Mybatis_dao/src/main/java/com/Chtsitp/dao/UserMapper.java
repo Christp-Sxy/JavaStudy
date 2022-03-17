@@ -1,7 +1,6 @@
 package com.Chtsitp.dao;
 
 
-
 import com.Chtsitp.domain.User;
 
 import java.io.IOException;

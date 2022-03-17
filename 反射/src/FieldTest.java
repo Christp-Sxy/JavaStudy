@@ -12,20 +12,20 @@ import java.lang.reflect.Modifier;
  */
 
 /*
-* 获取当前运行时类的属性结构
-*/
+ * 获取当前运行时类的属性结构
+ */
 
 public class FieldTest {
 
     @Test
-    public void test01(){
+    public void test01() {
         Class<Persom> clazz = Persom.class;
 
         //获取属性结构
         //getFields():获取当前运行时类及其父类中访问权限声明为public的属性
         Field[] fields = clazz.getFields();
-        for (Field f: fields
-             ) {
+        for (Field f : fields
+        ) {
             System.out.println(f);
         }
 
@@ -34,17 +34,17 @@ public class FieldTest {
 
         //getDeclaredFields():获取当前运行时类中声明的所有属性，但不包括父类中声明的属性
         Field[] declaredFields = clazz.getDeclaredFields();
-        for (Field f: declaredFields
+        for (Field f : declaredFields
         ) {
             System.out.println(f);
         }
     }
 
     @Test
-    public void test02(){
+    public void test02() {
         Class<Persom> clazz = Persom.class;
         Field[] declaredFields = clazz.getDeclaredFields();
-        for (Field f: declaredFields
+        for (Field f : declaredFields
         ) {
             //1.权限修饰符
             int modifier = clazz.getModifiers();

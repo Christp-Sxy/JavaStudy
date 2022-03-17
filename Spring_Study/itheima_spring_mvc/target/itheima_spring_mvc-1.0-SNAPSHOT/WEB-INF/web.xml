@@ -6,7 +6,7 @@
 
 
     <!--配置SpringMVC的前端控制器-->
-<!--    因为只有控制器需要加载spring-mvc.xml文件，所以只需要在控制器中导入就行-->
+    <!--    因为只有控制器需要加载spring-mvc.xml文件，所以只需要在控制器中导入就行-->
     <servlet>
         <servlet-name>DispatcherServlet</servlet-name>
         <servlet-class>org.springframework.web.servlet.DispatcherServlet</servlet-class>
@@ -32,7 +32,7 @@
     <listener>
         <listener-class>org.springframework.web.context.ContextLoaderListener</listener-class>
     </listener>
-    
+
     <listener>
         <listener-class>com.itheima.listener.ContextLoaderListener01</listener-class>
     </listener>

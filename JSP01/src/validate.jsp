@@ -10,19 +10,19 @@
     <title>Title</title>
 </head>
 <body>
-    <%
-        String loginAct = request.getParameter("loginAct");
-        String loginPwd = request.getParameter("loginPwd");
-        if("sxy".equals(loginAct) && "123".equals(loginPwd)){
-    %>
-    <jsp:forward page="success.jsp"></jsp:forward>
+<%
+    String loginAct = request.getParameter("loginAct");
+    String loginPwd = request.getParameter("loginPwd");
+    if ("sxy".equals(loginAct) && "123".equals(loginPwd)) {
+%>
+<jsp:forward page="success.jsp"></jsp:forward>
 
-    <%}
-    else{
-    %>
-    <jsp:forward page="login.jsp"></jsp:forward>
-    <%
-        }
-    %>
+<%
+} else {
+%>
+<jsp:forward page="login.jsp"></jsp:forward>
+<%
+    }
+%>
 </body>
 </html>

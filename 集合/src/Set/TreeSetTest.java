@@ -16,14 +16,14 @@ import java.util.TreeSet;
 public class TreeSetTest {
 
     /*
-    * 1、向TreeSet中添加的数据，要求是相同类的对象
-    * 2、两种排序方式：自然排序和定制排序
-    * 3、自然排序中，比较两个对象是否相同的标准为：compareTo()的返回值是否为0，而不是用equals()方法
-    * 4、定制排序中，比较两个对象是否相同的标准为：compareTo()的返回值是否为0，而不是用equals()方法
-    */
+     * 1、向TreeSet中添加的数据，要求是相同类的对象
+     * 2、两种排序方式：自然排序和定制排序
+     * 3、自然排序中，比较两个对象是否相同的标准为：compareTo()的返回值是否为0，而不是用equals()方法
+     * 4、定制排序中，比较两个对象是否相同的标准为：compareTo()的返回值是否为0，而不是用equals()方法
+     */
 
     @Test
-    public void test1(){
+    public void test1() {
         TreeSet set = new TreeSet();
 
         /*
@@ -42,16 +42,17 @@ public class TreeSetTest {
             System.out.println(o);
         }
     }
+
     @Test
-    public void test2(){
+    public void test2() {
         Comparator com = new Comparator() {
             @Override
             public int compare(Object o1, Object o2) {
-                if (o1 instanceof Person && o2 instanceof Person){
+                if (o1 instanceof Person && o2 instanceof Person) {
                     Person p1 = (Person) o1;
                     Person p2 = (Person) o2;
                     return Integer.compare(p1.getAge(), p2.getAge());
-                }else {
+                } else {
                     throw new RuntimeException("数据类型不匹配");
                 }
             }

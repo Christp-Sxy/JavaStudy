@@ -19,6 +19,6 @@ import java.util.List;
  * @Version 1.0
  **/
 //implements UserMapper
-public class UseMapperImpl  {
+public class UseMapperImpl {
 
 }

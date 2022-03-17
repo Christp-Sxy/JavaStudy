@@ -15,14 +15,14 @@ import java.nio.charset.StandardCharsets;
  */
 
 /*
-* 实现TCP的网络编程
-* 例子1：客户端将数据发送给服务端，服务端将数据显示在控制台上
-*/
+ * 实现TCP的网络编程
+ * 例子1：客户端将数据发送给服务端，服务端将数据显示在控制台上
+ */
 
 public class TCPTest {
     //客户端
     @Test
-    public void client(){
+    public void client() {
         Socket socket = null;
         OutputStream os = null;
         try {
@@ -34,7 +34,7 @@ public class TCPTest {
         } catch (IOException e) {
             e.printStackTrace();
         } finally {
-            if (os != null){
+            if (os != null) {
                 try {
                     os.close();
                 } catch (IOException e) {
@@ -42,7 +42,7 @@ public class TCPTest {
                 }
             }
 
-            if (socket != null){
+            if (socket != null) {
                 try {
                     socket.close();
                 } catch (IOException e) {
@@ -54,7 +54,7 @@ public class TCPTest {
 
     //服务端
     @Test
-    public void server(){
+    public void server() {
         ServerSocket ss = null;
         Socket so = null;
         ByteArrayOutputStream baos = null;
@@ -77,14 +77,14 @@ public class TCPTest {
             baos = new ByteArrayOutputStream();
             byte[] buffer = new byte[20];
             int len;
-            while ((len = is.read(buffer)) != -1){
-                baos.write(buffer,0, len);
+            while ((len = is.read(buffer)) != -1) {
+                baos.write(buffer, 0, len);
             }
             System.out.println(baos.toString());
         } catch (IOException e) {
             e.printStackTrace();
         } finally {
-            if (so != null){
+            if (so != null) {
                 try {
                     so.close();
                 } catch (IOException e) {
@@ -92,14 +92,14 @@ public class TCPTest {
                 }
             }
 
-            if (ss != null){
+            if (ss != null) {
                 try {
                     ss.close();
                 } catch (IOException e) {
                     e.printStackTrace();
                 }
             }
-            if (baos != null){
+            if (baos != null) {
                 try {
                     baos.close();
                 } catch (IOException e) {

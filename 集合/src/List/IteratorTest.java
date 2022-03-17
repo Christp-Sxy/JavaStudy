@@ -15,12 +15,12 @@ import java.util.Iterator;
  */
 
 /*
-* 结合元素的遍历操作，使用迭代器Iterator接口
-*/
+ * 结合元素的遍历操作，使用迭代器Iterator接口
+ */
 
 public class IteratorTest {
     @Test
-    public void test1(){
+    public void test1() {
         Collection<Object> coll1 = new ArrayList<>();
         coll1.add("CC");
         coll1.add(456);
@@ -45,6 +45,7 @@ public class IteratorTest {
 //            System.out.println(iterator.next());
 //        }
     }
+
     @Test
     public void test2() {
         Collection<Object> coll2 = new ArrayList<>();
@@ -55,15 +56,15 @@ public class IteratorTest {
 
         Iterator<Object> iterator = coll2.iterator();
         //删除集合中的123元素
-        while (iterator.hasNext()){
+        while (iterator.hasNext()) {
             Object obj = iterator.next();
-            if ("123".equals(obj)){
+            if ("123".equals(obj)) {
                 iterator.remove();
             }
 
-        while (iterator.hasNext()){
-            System.out.println(iterator.next());
-        }
+            while (iterator.hasNext()) {
+                System.out.println(iterator.next());
+            }
         }
     }
 }

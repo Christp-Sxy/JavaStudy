@@ -20,8 +20,8 @@ import java.util.List;
  **/
 
 /*
-* MyBatis默认事务是不提交的！！！
-* */
+ * MyBatis默认事务是不提交的！！！
+ * */
 
 public class MyBatisTest {
     @Test

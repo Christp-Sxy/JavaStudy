@@ -4,7 +4,7 @@
         "http://mybatis.org/dtd/mybatis-3-config.dtd">
 <configuration>
 
-<!--    通过外部的properties标签加载外部的properties文件-->
+    <!--    通过外部的properties标签加载外部的properties文件-->
     <properties resource="jdbc1.properties"/>
 
     <!--    自定义别名-->
@@ -15,7 +15,7 @@
     <typeAliases>
         <typeAlias type="com.Chtsitp.domain.User" alias="user"/>
     </typeAliases>
-<!--    配置数据源的环境-->
+    <!--    配置数据源的环境-->
     <environments default="development">
         <environment id="development">
             <transactionManager type="JDBC"/>
@@ -29,7 +29,7 @@
         </environment>
     </environments>
 
-<!--    加载映射文件-->
+    <!--    加载映射文件-->
     <mappers>
         <mapper resource="com/Christp/mapper/UserMapper.xml"/>
     </mappers>

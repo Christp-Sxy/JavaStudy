@@ -20,32 +20,32 @@ public class MyDemo {
         String sql = "insert into city values (?,?,?,?)";
         JSONReader reader = new JSONReader(new FileReader("C:\\Users\\sxy\\Desktop\\mydata.txt"));
         reader.startObject();
-        while (reader.hasNext()){
+        while (reader.hasNext()) {
             String key = reader.readString();
-            if ("resultcode".equals(key)){
+            if ("resultcode".equals(key)) {
                 String value = reader.readObject().toString();
                 System.out.println("resultcode为:" + value);
-            }else if ("reason".equals(key)){
+            } else if ("reason".equals(key)) {
                 String value = reader.readObject().toString();
                 System.out.println("reason为:" + value);
-            }else if ("result".equals(key)){
+            } else if ("result".equals(key)) {
                 reader.startArray();
-                while (reader.hasNext()){
+                while (reader.hasNext()) {
                     City city = new City();
                     reader.startObject();
-                    while (reader.hasNext()){
+                    while (reader.hasNext()) {
                         String singleKey = reader.readString();
                         String value = reader.readObject().toString();
-                        if ("id".equals(singleKey)){
+                        if ("id".equals(singleKey)) {
                             city.setId(Integer.parseInt(value));
                         }
-                        if ("province".equals(singleKey)){
+                        if ("province".equals(singleKey)) {
                             city.setProvince(value);
                         }
-                        if ("city".equals(singleKey)){
+                        if ("city".equals(singleKey)) {
                             city.setCity(value);
                         }
-                        if ("district".equals(singleKey)){
+                        if ("district".equals(singleKey)) {
                             city.setDistrict(value);
                         }
                     }
@@ -53,7 +53,7 @@ public class MyDemo {
                     reader.endObject();
                 }
                 reader.endArray();
-            }else if ("error_code".equals(key)){
+            } else if ("error_code".equals(key)) {
                 String value = reader.readObject().toString();
                 System.out.println("error_code为:" + value);
             }

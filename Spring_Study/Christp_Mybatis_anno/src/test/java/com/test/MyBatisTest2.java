@@ -36,10 +36,10 @@ public class MyBatisTest2 {
     }
 
     @Test
-    public void testFindAll(){
+    public void testFindAll() {
         List<Order> all = mapper.findAll();
-        for (Order in:
-             all) {
+        for (Order in :
+                all) {
             System.out.println(in);
         }
     }

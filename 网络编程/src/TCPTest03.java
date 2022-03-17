@@ -15,7 +15,7 @@ import java.nio.charset.StandardCharsets;
  */
 public class TCPTest03 {
     @Test
-    public void client(){
+    public void client() {
         Socket socket = null;
         OutputStream os = null;
         FileInputStream fis = null;
@@ -27,8 +27,8 @@ public class TCPTest03 {
             fis = new FileInputStream(new File("a94eafebdbf22ae350dd178b372ac26e.jpg"));
             byte[] buffer = new byte[1024];
             int len;
-            while ((len = fis.read(buffer)) != -1){
-                os.write(buffer,0, len);
+            while ((len = fis.read(buffer)) != -1) {
+                os.write(buffer, 0, len);
             }
             //服务器端给予客户端反馈
             oo = socket.getOutputStream();
@@ -36,7 +36,7 @@ public class TCPTest03 {
         } catch (IOException e) {
             e.printStackTrace();
         } finally {
-            if (fis != null){
+            if (fis != null) {
                 try {
                     fis.close();
                 } catch (IOException e) {
@@ -44,7 +44,7 @@ public class TCPTest03 {
                 }
             }
 
-            if (os != null){
+            if (os != null) {
                 try {
                     os.close();
                 } catch (IOException e) {
@@ -52,14 +52,14 @@ public class TCPTest03 {
                 }
             }
 
-            if (socket != null){
+            if (socket != null) {
                 try {
                     socket.close();
                 } catch (IOException e) {
                     e.printStackTrace();
                 }
             }
-            if (oo != null){
+            if (oo != null) {
                 try {
                     oo.close();
                 } catch (IOException e) {
@@ -70,7 +70,7 @@ public class TCPTest03 {
     }
 
     @Test
-    public void server(){
+    public void server() {
         ServerSocket ss = null;
         Socket socket = null;
         InputStream is = null;
@@ -84,22 +84,22 @@ public class TCPTest03 {
             fos = new FileOutputStream(new File("cc1.jpg"));
             byte[] buffer = new byte[1024];
             int len;
-            while ((len = is.read(buffer)) != -1){
-                fos.write(buffer,0, len);
+            while ((len = is.read(buffer)) != -1) {
+                fos.write(buffer, 0, len);
             }
             //接受来自于服务器端的数据，并显示到控制台上
             ii = socket.getInputStream();
             bao = new ByteArrayOutputStream();
             byte[] buffer1 = new byte[20];
             int len1;
-            while ((len1 = ii.read(buffer1)) != -1){
+            while ((len1 = ii.read(buffer1)) != -1) {
                 bao.write(buffer1, 0, len1);
             }
             System.out.println(bao.toString());
         } catch (IOException e) {
             e.printStackTrace();
         } finally {
-            if (fos != null){
+            if (fos != null) {
                 try {
                     fos.close();
                 } catch (IOException e) {
@@ -107,7 +107,7 @@ public class TCPTest03 {
                 }
             }
 
-            if (is != null){
+            if (is != null) {
                 try {
                     is.close();
                 } catch (IOException e) {
@@ -115,7 +115,7 @@ public class TCPTest03 {
                 }
             }
 
-            if (socket != null){
+            if (socket != null) {
                 try {
                     socket.close();
                 } catch (IOException e) {
@@ -123,21 +123,21 @@ public class TCPTest03 {
                 }
             }
 
-            if (ss != null){
+            if (ss != null) {
                 try {
                     ss.close();
                 } catch (IOException e) {
                     e.printStackTrace();
                 }
             }
-            if (bao != null){
+            if (bao != null) {
                 try {
                     bao.close();
                 } catch (IOException e) {
                     e.printStackTrace();
                 }
             }
-            if (ii != null){
+            if (ii != null) {
                 try {
                     ii.close();
                 } catch (IOException e) {

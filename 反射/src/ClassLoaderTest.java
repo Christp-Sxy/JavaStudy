@@ -12,12 +12,12 @@ import java.util.Properties;
  */
 
 /*
-* 了解类的加载器
-*/
+ * 了解类的加载器
+ */
 
 public class ClassLoaderTest {
     @Test
-    public void test01(){
+    public void test01() {
         //对于自定义加载器，使用系统类加载器进行加载
         ClassLoader classLoader1 = ClassLoaderTest.class.getClassLoader();//系统类的加载器
         //调用系统类加载的getParent():获取扩展类加载器
@@ -29,8 +29,8 @@ public class ClassLoaderTest {
 
 
     /*
-    * Properties:用来读取配置文件
-    */
+     * Properties:用来读取配置文件
+     */
     @Test
     public void test02() throws IOException {
         Properties pros = new Properties();
@@ -38,7 +38,6 @@ public class ClassLoaderTest {
         //读取配置文件的方式一
 //        FileInputStream fis = new FileInputStream("jdbc.properties");
 //        pros.load(fis);
-
 
 
         //读取方式二：利用ClassLoader

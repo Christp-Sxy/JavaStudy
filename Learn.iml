@@ -116,7 +116,7 @@
             <entry key="rebelXmlGenerationType" value="ide" />
           </map>
         </option>
-        <option name="version" value="5" />
+        <option name="version" value="10" />
       </configuration>
     </facet>
     <facet type="web" name="Web">
@@ -148,6 +148,50 @@
         </descriptors>
         <webroots>
           <root url="file://$MODULE_DIR$/Spring_Study/out/artifacts/Spring_mvc_war_exploded2" relative="/" />
+        </webroots>
+        <sourceRoots />
+      </configuration>
+    </facet>
+    <facet type="web" name="Web16">
+      <configuration>
+        <descriptors>
+          <deploymentDescriptor name="web.xml" url="file://$MODULE_DIR$/JSP01/web/WEB-INF/web.xml" />
+        </descriptors>
+        <webroots>
+          <root url="file://$MODULE_DIR$/JSP01/web" relative="/" />
+        </webroots>
+        <sourceRoots />
+      </configuration>
+    </facet>
+    <facet type="web" name="Web15">
+      <configuration>
+        <descriptors>
+          <deploymentDescriptor name="web.xml" url="file://$MODULE_DIR$/JSP01/out/artifacts/JSP01_Web_exploded/WEB-INF/web.xml" />
+        </descriptors>
+        <webroots>
+          <root url="file://$MODULE_DIR$/JSP01/out/artifacts/JSP01_Web_exploded" relative="/" />
+        </webroots>
+        <sourceRoots />
+      </configuration>
+    </facet>
+    <facet type="web" name="Web14">
+      <configuration>
+        <descriptors>
+          <deploymentDescriptor name="web.xml" url="file://$MODULE_DIR$/JSP01/out/artifacts/JSP01_Web_exploded/web.xml" />
+        </descriptors>
+        <webroots>
+          <root url="file://$MODULE_DIR$/JSP01/out/artifacts/JSP01_Web_exploded" relative="/WEB-INF" />
+        </webroots>
+        <sourceRoots />
+      </configuration>
+    </facet>
+    <facet type="web" name="Web13">
+      <configuration>
+        <descriptors>
+          <deploymentDescriptor name="web.xml" url="file://$MODULE_DIR$/JSP01/web2/WEB-INF/web.xml" />
+        </descriptors>
+        <webroots>
+          <root url="file://$MODULE_DIR$/JSP01/web2" relative="/" />
         </webroots>
         <sourceRoots />
       </configuration>

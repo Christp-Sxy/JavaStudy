@@ -13,14 +13,14 @@ import java.lang.reflect.Method;
  */
 
 /*
-*
-*/
+ *
+ */
 
 public class ReflectionTest {
 
     //反射之前对于Persom类的操作
     @Test
-    public void test01(){
+    public void test01() {
         //创建Persom类对象
         Persom p1 = new Persom(12, "Tmo");
         p1.age = 10;
@@ -28,9 +28,9 @@ public class ReflectionTest {
 
         p1.show();
         /*
-        * Persom类外部，不能通过Persom类的对象调用其内部私有结构
-        * 比如name, showNation()以及私有类的构造器
-        */
+         * Persom类外部，不能通过Persom类的对象调用其内部私有结构
+         * 比如name, showNation()以及私有类的构造器
+         */
     }
 
     //反射之后，对于Persom的操作

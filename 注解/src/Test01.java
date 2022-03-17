@@ -9,7 +9,6 @@ import java.time.Period;
  */
 
 
-
 public class Test01 {
     public static void main(String[] args) {
         Person p = new Students();
@@ -17,38 +16,39 @@ public class Test01 {
     }
 }
 
-class Person{
+class Person {
 
-    public Person(){
+    public Person() {
 
     }
 
-    public void walk(){
+    public void walk() {
         System.out.println("人走路");
     }
 
-    public void eat(){
+    public void eat() {
         System.out.println("人吃饭");
     }
 }
 
-interface Info{
+interface Info {
     /**
-    * 这个接口屁用没有
-    * @author Christp
-    * @Description 啥也不干
-    * @date 14:08 2021/9/14
-    * @param x int
-    **/
+     * 这个接口屁用没有
+     *
+     * @param x int
+     * @author Christp
+     * @Description 啥也不干
+     * @date 14:08 2021/9/14
+     **/
     public void show(int x);
 }
 
-class Students extends Person implements Info{
+class Students extends Person implements Info {
     /**
-    * @author Christp
-    * @Description
-    * @date 14:06 2021/9/14
-    **/
+     * @author Christp
+     * @Description
+     * @date 14:06 2021/9/14
+     **/
     @Override
     public void walk() {
         System.out.println("学生走路");

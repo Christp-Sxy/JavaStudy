@@ -7,20 +7,20 @@
  */
 
 /*
-* 静态代理举例
-* 特点：代理类和被代理类在编译期间就已经确定下来了
-*/
+ * 静态代理举例
+ * 特点：代理类和被代理类在编译期间就已经确定下来了
+ */
 
 
-interface ClothFactory{
+interface ClothFactory {
     void produceCloth();
 }
 
-class ProxyClothFactory implements ClothFactory{
+class ProxyClothFactory implements ClothFactory {
 
     private ClothFactory factory;    // 将被代理对象进行实例化
 
-    public ProxyClothFactory(ClothFactory factory){
+    public ProxyClothFactory(ClothFactory factory) {
         this.factory = factory;
     }
 
@@ -34,7 +34,7 @@ class ProxyClothFactory implements ClothFactory{
 
 
 //被代理类
-class ChristpClothFactory implements ClothFactory{
+class ChristpClothFactory implements ClothFactory {
 
     @Override
     public void produceCloth() {

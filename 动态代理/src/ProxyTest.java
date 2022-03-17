@@ -50,11 +50,11 @@ class ProxyFactory {
     }
 }
 
-class MyInvocationHandler implements InvocationHandler{
+class MyInvocationHandler implements InvocationHandler {
 
     private Object obj;//需要使用被代理类的对象进行赋值
 
-    public void bind(Object obj){
+    public void bind(Object obj) {
         this.obj = obj;
     }
 
@@ -63,9 +63,9 @@ class MyInvocationHandler implements InvocationHandler{
     @Override
     public Object invoke(Object proxy, Method method, Object[] args) throws Throwable {
         /*
-        * method:即为代理类对象调用的方法，此方法也就作为了被代理类对象要调用的方法
-        * obj:被代理类对象
-        */
+         * method:即为代理类对象调用的方法，此方法也就作为了被代理类对象要调用的方法
+         * obj:被代理类对象
+         */
         return method.invoke(obj, args);
     }
 }

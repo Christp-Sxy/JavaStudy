@@ -29,6 +29,9 @@
     </resultMap>
 
     <select id="findAll" resultMap="orderMap">
-        select *,o.uid oid from orders o,info u where o.uid=u.id1
+        select *, o.uid oid
+        from orders o,
+             info u
+        where o.uid = u.id1
     </select>
 </mapper>

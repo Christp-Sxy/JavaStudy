@@ -22,7 +22,7 @@ public class SpringJUnitTest {
     private UserService userService;
 
     @Test
-    public void test01(){
+    public void test01() {
         userService.save();
     }
 }

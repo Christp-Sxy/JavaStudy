@@ -35,7 +35,6 @@ public class UserDaoImpl implements UserDao {
     }
 
 
-
     public void setUsername(String username) {
         this.username = username;
     }

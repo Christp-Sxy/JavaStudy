@@ -7,5 +7,5 @@ package DAO;
  * @Description TODO
  * @date 2021/9/28 21:32
  */
-public class CustomerDAO extends DAO<Customer>{
+public class CustomerDAO extends DAO<Customer> {
 }

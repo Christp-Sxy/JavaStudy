@@ -16,7 +16,7 @@ import org.springframework.stereotype.Repository;
 
 //<bean id="userDao" class="com.com.com.Christp.dao.impl.UserDaoImpl"/>
 //@Component("userDao")
-    //仓库(DAO)用@Repository
+//仓库(DAO)用@Repository
 @Repository("userDao")
 public class UserDaoImpl implements UserDao {
 

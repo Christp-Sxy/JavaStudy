@@ -14,21 +14,21 @@ import java.nio.charset.StandardCharsets;
  */
 
 /*
-* 处理流之二：转换流的使用
-* 1.转换流：
-*   InputStreamReader：将一个字节的输入流转换为字符的输出流
-*   OutputStreamWriter：将一个字符的输出流转换为字节的输出流
-* 2.提供字符流和字节流的转换
-* 3.解码：字节，字节数组 ——> 字符串，字符数组
-*   编码：字符串，字符数组 ——> 字节，字节数组
-* 4.字符集
+ * 处理流之二：转换流的使用
+ * 1.转换流：
+ *   InputStreamReader：将一个字节的输入流转换为字符的输出流
+ *   OutputStreamWriter：将一个字符的输出流转换为字节的输出流
+ * 2.提供字符流和字节流的转换
+ * 3.解码：字节，字节数组 ——> 字符串，字符数组
+ *   编码：字符串，字符数组 ——> 字节，字节数组
+ * 4.字符集
  *
-*/
+ */
 
 public class StreamReaderAndWriterTest {
 
     @Test
-    public void test01(){
+    public void test01() {
         FileInputStream fis = null;
         try {
             File file;
@@ -39,14 +39,14 @@ public class StreamReaderAndWriterTest {
 
             byte[] cbuf = new byte[20];
             int len;
-            while ((len = fis.read(cbuf)) != -1){
+            while ((len = fis.read(cbuf)) != -1) {
                 String str = new String(cbuf, 0, len);
                 System.out.println(str);
             }
         } catch (IOException e) {
             e.printStackTrace();
         } finally {
-            if (fis != null){
+            if (fis != null) {
                 try {
                     fis.close();
                 } catch (IOException e) {
@@ -57,11 +57,11 @@ public class StreamReaderAndWriterTest {
     }
 
     /*
-    * 综合使用InputReader和OutputWriter
-    */
+     * 综合使用InputReader和OutputWriter
+     */
 
     @Test
-    public void test02(){
+    public void test02() {
         InputStreamReader isr = null;
         OutputStreamWriter osw = null;
         try {
@@ -76,13 +76,13 @@ public class StreamReaderAndWriterTest {
 
             char[] cbuf = new char[20];
             int len;
-            while ((len = isr.read(cbuf)) != -1){
+            while ((len = isr.read(cbuf)) != -1) {
                 osw.write(cbuf, 0, len);
             }
         } catch (IOException e) {
             e.printStackTrace();
         } finally {
-            if (osw != null){
+            if (osw != null) {
                 try {
                     osw.close();
                 } catch (IOException e) {
@@ -90,7 +90,7 @@ public class StreamReaderAndWriterTest {
                 }
             }
 
-            if (isr != null){
+            if (isr != null) {
                 try {
                     isr.close();
                 } catch (IOException e) {

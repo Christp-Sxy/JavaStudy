@@ -1,4 +1,5 @@
 import com.alibaba.druid.pool.DruidDataSourceFactory;
+
 import javax.sql.DataSource;
 import java.sql.Connection;
 import java.sql.ResultSet;
@@ -17,9 +18,9 @@ import java.util.Properties;
 public class JDBCUtils {
 
     //1.定义成员变量 DataSource
-    private static DataSource ds ;
+    private static DataSource ds;
 
-    static{
+    static {
         try {
             //1.加载配置文件
             Properties pro = new Properties();
@@ -41,15 +42,15 @@ public class JDBCUtils {
     /**
      * 释放资源
      */
-    public static void close(Statement stmt,Connection conn){
-        close(null,stmt,conn);
+    public static void close(Statement stmt, Connection conn) {
+        close(null, stmt, conn);
     }
 
 
-    public static void close(ResultSet rs , Statement stmt, Connection conn){
+    public static void close(ResultSet rs, Statement stmt, Connection conn) {
 
 
-        if(rs != null){
+        if (rs != null) {
             try {
                 rs.close();
             } catch (SQLException e) {
@@ -58,7 +59,7 @@ public class JDBCUtils {
         }
 
 
-        if(stmt != null){
+        if (stmt != null) {
             try {
                 stmt.close();
             } catch (SQLException e) {
@@ -66,7 +67,7 @@ public class JDBCUtils {
             }
         }
 
-        if(conn != null){
+        if (conn != null) {
             try {
                 conn.close();//归还连接
             } catch (SQLException e) {
@@ -79,8 +80,8 @@ public class JDBCUtils {
      * 获取连接池方法
      */
 
-    public static DataSource getDataSource(){
-        return  ds;
+    public static DataSource getDataSource() {
+        return ds;
     }
 
 }

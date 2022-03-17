@@ -22,7 +22,7 @@ import java.util.ResourceBundle;
 public class DataSourceTest {
     @Test
     //测试手动创建c3p1数据源
-    public void test01() throws Exception{
+    public void test01() throws Exception {
         ComboPooledDataSource dataSource = new ComboPooledDataSource();
         dataSource.setDriverClass("com.mysql.jdbc.Driver");
         dataSource.setJdbcUrl("jdbc:mysql:///study?useSSL=false");
@@ -47,7 +47,7 @@ public class DataSourceTest {
 
     @Test
     //测试手动创建c3p1数据源(加载配置文件形式)
-    public void test03() throws Exception{
+    public void test03() throws Exception {
         /*
         读取的起始路径是类加载路径
         需要的参数为文件的基本名称也就是不含文件形式的
@@ -71,7 +71,7 @@ public class DataSourceTest {
 
     @Test
     //测试手动创建c3p1数据源(Spring形式)
-    public void test04() throws Exception{
+    public void test04() throws Exception {
         ApplicationContext app = new ClassPathXmlApplicationContext("applicationContext.xml");
         DataSource dataSource = app.getBean(DataSource.class);
         Connection con = dataSource.getConnection();

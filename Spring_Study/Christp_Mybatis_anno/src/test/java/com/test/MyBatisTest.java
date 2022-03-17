@@ -33,7 +33,7 @@ public class MyBatisTest {
     }
 
     @Test
-    public void SaveTest(){
+    public void SaveTest() {
         User user = new User();
         user.setUsername("Christp");
         user.setPassword("123456");
@@ -41,7 +41,7 @@ public class MyBatisTest {
     }
 
     @Test
-    public void UpdateTest(){
+    public void UpdateTest() {
         User user = new User();
         user.setUsername("Christp");
         user.setPassword("1246");
@@ -49,21 +49,21 @@ public class MyBatisTest {
     }
 
     @Test
-    public void DeleteTest(){
+    public void DeleteTest() {
         mapper.delete(6);
     }
 
     @Test
-    public void SelectByIdTest(){
+    public void SelectByIdTest() {
         User user = mapper.findById(1);
         System.out.println(user);
     }
 
     @Test
-    public void SelectAllTest(){
+    public void SelectAllTest() {
         List<User> userList = mapper.findAll();
-        for (User user:
-             userList) {
+        for (User user :
+                userList) {
             System.out.println(user);
         }
     }

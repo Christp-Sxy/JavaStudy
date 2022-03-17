@@ -30,7 +30,7 @@ public class DataSourceConfiguration {
 
 
     @Bean("dataSource")//Spring会将当前方法的返回值以指定名称存储到Spring容器中
-    public DataSource getDataSource() throws Exception{
+    public DataSource getDataSource() throws Exception {
         ComboPooledDataSource dataSource = new ComboPooledDataSource();
         dataSource.setDriverClass(driver);
         dataSource.setJdbcUrl(url);

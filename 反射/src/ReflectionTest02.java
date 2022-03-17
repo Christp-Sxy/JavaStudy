@@ -12,12 +12,12 @@ import java.lang.reflect.Method;
  */
 
 /*
-*
-*/
+ *
+ */
 
 public class ReflectionTest02 {
     @Test
-    public void test01() throws Exception{
+    public void test01() throws Exception {
         Class<Persom> clazz = Persom.class;
         //创建运行时类的对象(注意:获取的对象一定要有空的构造函数)
         Persom p = (Persom) clazz.newInstance();
@@ -27,26 +27,26 @@ public class ReflectionTest02 {
         Field id = clazz.getField("id");
 
         /*
-        * 设置当前属性的值
-        *
-        * set():参数1:指明设置哪个对象的属性     参数2:将此属性值设置为多少
-        */
+         * 设置当前属性的值
+         *
+         * set():参数1:指明设置哪个对象的属性     参数2:将此属性值设置为多少
+         */
 
         id.set(p, 1001);
 
         /*
-        * 获取当前对象的属性值
-        * get()L:参数1:获取哪个对象的当前属性值
-        */
-        int pId = (int)id.get(p);
+         * 获取当前对象的属性值
+         * get()L:参数1:获取哪个对象的当前属性值
+         */
+        int pId = (int) id.get(p);
         System.out.println(pId);
     }
 
     @Test
     public void testField1() throws Exception {
         /*
-        * 如何操作运行时类的指定属性
-        */
+         * 如何操作运行时类的指定属性
+         */
         Class<Persom> clazz = Persom.class;
         Persom p = clazz.newInstance();
 
@@ -70,17 +70,17 @@ public class ReflectionTest02 {
         Persom p = clazz.newInstance();
 
         /*
-        * 获取指定的某个方法：
-        * getDeclaredMethod():参数1:指明获取的方法的名称，参数2:指明获取的方法的形参列表
-        */
+         * 获取指定的某个方法：
+         * getDeclaredMethod():参数1:指明获取的方法的名称，参数2:指明获取的方法的形参列表
+         */
         Method show = clazz.getDeclaredMethod("showNation", String.class);
         //同上一个调用属性，确保方法可访问
         show.setAccessible(true);
 
         /*
-        * invoke():参数1:方法的调用者   参数2:给方法形参赋值的实参
-        * invoke()方法的返回值即为所调用用类中的方法的返回值
-        */
+         * invoke():参数1:方法的调用者   参数2:给方法形参赋值的实参
+         * invoke()方法的返回值即为所调用用类中的方法的返回值
+         */
         show.invoke(p, "CHN");
 
         System.out.println("**************调用静态方法****************");

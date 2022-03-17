@@ -44,7 +44,9 @@ public class Persom {
         return name;
     }
 
-    public Persom() { }
+    public Persom() {
+    }
+
     public void setName(String name) {
         this.name = name;
     }
@@ -54,15 +56,15 @@ public class Persom {
         this.name = name;
     }
 
-    private Persom(String name){
+    private Persom(String name) {
         this.name = name;
     }
 
-    public static void show(){
+    public static void show() {
         System.out.println("这是个人");
     }
 
-    private String showNation(String nation){
+    private String showNation(String nation) {
         System.out.println("我的国籍是：" + nation);
         return nation;
     }

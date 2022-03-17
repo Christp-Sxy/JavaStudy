@@ -12,8 +12,8 @@ import java.net.*;
  */
 
 /*
-* UDP协议的网络编程
-*/
+ * UDP协议的网络编程
+ */
 
 public class UDPTest01 {
     @Test
@@ -22,7 +22,7 @@ public class UDPTest01 {
         String str = "我恁爹";
         byte[] data = str.getBytes();
         InetAddress inet = InetAddress.getLocalHost();
-        DatagramPacket packet = new DatagramPacket(data, 0, data.length, inet, 9090 );
+        DatagramPacket packet = new DatagramPacket(data, 0, data.length, inet, 9090);
 
         socket.send(packet);
         socket.close();

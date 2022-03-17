@@ -1,4 +1,3 @@
-import java.util.ArrayList;
 import java.util.Arrays;
 
 /**
@@ -26,13 +25,14 @@ public class CompareTest {
     对比Comparable和Comparator
     前者是类里面自己的一个接口可以使用，而后者则是临时定义的一个方法，
     */
+
     /**
-    * @author Christp
-    * @Description
-    * @date 17:27 2021/9/9
-    **/
-    public void test(){
-        String[] arr = new String[]{ "AA", "BB", "CC", "GG" };
+     * @author Christp
+     * @Description
+     * @date 17:27 2021/9/9
+     **/
+    public void test() {
+        String[] arr = new String[]{"AA", "BB", "CC", "GG"};
         Arrays.sort(arr);
         System.out.println(Arrays.toString(arr));
     }

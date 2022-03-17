@@ -10,7 +10,7 @@ import org.junit.Test;
  */
 public class DemoTest {
     @Test
-    public void testSay(){
+    public void testSay() {
         Demo demo = new Demo();
         String ret = demo.say("帅逼");
         Assert.assertEquals("hello帅逼", ret);

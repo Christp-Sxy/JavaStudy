@@ -20,13 +20,12 @@ import javax.annotation.Resource;
 
 //<bean id="userService" class="com.com.com.Christp.service.impl.UserServiceImpl">
 //@Component("userService")
-    //业务层(Service)用Service
+//业务层(Service)用Service
 @Service("userService")
 public class UserServiceImpl implements UserService {
 
     @Value("${jdbc.driver}")//为下面的基础属性参数进行赋值，可以调用xml中调用的配置文件
     private String driver;
-
 
 
     //<property name="userDao" ref="userDao"/>

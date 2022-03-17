@@ -14,7 +14,7 @@ public class UserController {
     // 请求地址  http://localhost:8080/user/quick
 //    @RequestMapping(value="/quick",method = RequestMethod.GET,params = {"username"})
     @RequestMapping("/b")
-    public String save(){
+    public String save() {
         System.out.println("Controller save running....");
         return "success.jsp";
     }

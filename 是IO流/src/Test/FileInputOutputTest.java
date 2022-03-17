@@ -2,7 +2,10 @@ package Test;
 
 import org.junit.Test;
 
-import java.io.*;
+import java.io.File;
+import java.io.FileInputStream;
+import java.io.FileOutputStream;
+import java.io.IOException;
 
 /**
  * @author Christp
@@ -13,17 +16,17 @@ import java.io.*;
  */
 
 /*
-* 测试FileInputStream和FileOutputStream的使用
-*
-* 结论:
-* 1.对于文本文件(.txt, .java, .c, .cpp...)，使用字符流处理
-* 2.对于非文本文件(.jpg, .mp3, .mp4, .avi...)，使用字节流处理
-*/
+ * 测试FileInputStream和FileOutputStream的使用
+ *
+ * 结论:
+ * 1.对于文本文件(.txt, .java, .c, .cpp...)，使用字符流处理
+ * 2.对于非文本文件(.jpg, .mp3, .mp4, .avi...)，使用字节流处理
+ */
 
 public class FileInputOutputTest {
 
     @Test
-    public void testFileInputStream(){
+    public void testFileInputStream() {
         FileInputStream fis = null;
         try {
             //1.造文件
@@ -35,7 +38,7 @@ public class FileInputOutputTest {
             //3.写出的操作
             byte[] buffer = new byte[5];
             int len;
-            while ((len = fis.read(buffer)) != -1){
+            while ((len = fis.read(buffer)) != -1) {
                 String str = new String(buffer, 0, len);
                 System.out.println(str);
             }
@@ -54,11 +57,11 @@ public class FileInputOutputTest {
     }
 
     /*
-    * 实现对图片的复制操作
-    */
+     * 实现对图片的复制操作
+     */
 
     @Test
-    public void testFileInputOutputStream(){
+    public void testFileInputOutputStream() {
         FileOutputStream fos = null;
         FileInputStream fis = null;
         try {
@@ -97,7 +100,7 @@ public class FileInputOutputTest {
     }
 
     //指定路径下文件的复制
-    public void copyFile(String srcPath, String destPath){
+    public void copyFile(String srcPath, String destPath) {
         FileOutputStream fos = null;
         FileInputStream fis = null;
         try {

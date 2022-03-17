@@ -19,16 +19,16 @@ public class SeasonTest1 {
     }
 }
 
- enum Season1{
+enum Season1 {
     /**
-    * 提供当前类的对象,多个对象之间用","来隔开，末位的对象用";"
-    */
-    SPRING("春天", "春暖花开"){
+     * 提供当前类的对象,多个对象之间用","来隔开，末位的对象用";"
+     */
+    SPRING("春天", "春暖花开") {
         /**
-        * 每个枚举类对象都可以重写一个接口
-        */
+         * 每个枚举类对象都可以重写一个接口
+         */
         @Override
-        public void show(){
+        public void show() {
             System.out.println("我带你们打");
         }
     },
@@ -52,23 +52,23 @@ public class SeasonTest1 {
     };
 
     /**
-    * 2.声明Season对象的属性，用private final来修饰
-    */
+     * 2.声明Season对象的属性，用private final来修饰
+     */
     private final String seasonName;
     private final String seasonDesc;
 
     /**
-    * 3.私有化类的构造器，并给对象属性赋值
-    */
+     * 3.私有化类的构造器，并给对象属性赋值
+     */
 
-    private Season1(String seasonName, String seasonDesc){
+    private Season1(String seasonName, String seasonDesc) {
         this.seasonName = seasonName;
         this.seasonDesc = seasonDesc;
     }
 
     /**
-    * 4.其他诉求1：获取枚举类对象的属性
-    */
+     * 4.其他诉求1：获取枚举类对象的属性
+     */
     public String getSeasonName() {
         return seasonName;
     }
@@ -78,8 +78,8 @@ public class SeasonTest1 {
     }
 
     /**
-    * 其他诉求2：提供toString()方法
-    */
+     * 其他诉求2：提供toString()方法
+     */
     @Override
     public String toString() {
         return "Season1{" +

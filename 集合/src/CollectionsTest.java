@@ -7,11 +7,11 @@
  */
 
 /*
-* Collections:操作Collection和Map的工具类
-* 见url = "https://www.jianshu.com/p/d1f67bacc04e"
-* 面试题：Collection和Collections的区别?
-*
-*/
+ * Collections:操作Collection和Map的工具类
+ * 见url = "https://www.jianshu.com/p/d1f67bacc04e"
+ * 面试题：Collection和Collections的区别?
+ *
+ */
 
 public class CollectionsTest {
 }

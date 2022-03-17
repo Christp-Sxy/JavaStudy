@@ -98,13 +98,13 @@ import java.util.*;
 public class MapTest {
 
     @Test
-    public void test1(){
+    public void test1() {
         Map map = new HashMap();
         map.put(null, 123);
     }
 
     @Test
-    public void test2(){
+    public void test2() {
 
         /*
         * 添加、删除、修改操作：
@@ -142,7 +142,7 @@ public class MapTest {
     }
 
     @Test
-    public void test4(){
+    public void test4() {
         /*
         *元素查询的操作：
             Object get(Object key)：获取指定key对应的value
@@ -177,7 +177,7 @@ public class MapTest {
     }
 
     @Test
-    public void test5(){
+    public void test5() {
         Map map = new HashMap();
         //添加
         map.put("AA", 123);
@@ -193,23 +193,23 @@ public class MapTest {
 
         //遍历所有的value集:values()
         Collection values = map.values();
-        for (Object o: values
-             ) {
+        for (Object o : values
+        ) {
             System.out.println(o);
         }
 
         //遍历所有的key - value:
         // 方式一:entrySet()
         Set set1 = map.entrySet();
-        for (Object o:set1
-             ) {
+        for (Object o : set1
+        ) {
             System.out.println(o);
         }
 
         //方式二:
         Set keySet = map.keySet();
         Iterator iterator1 = keySet.iterator();
-        while(iterator1.hasNext()){
+        while (iterator1.hasNext()) {
             Object key = iterator1.next();
             Object value = map.get(key);
             System.out.println(key + "---->" + value);

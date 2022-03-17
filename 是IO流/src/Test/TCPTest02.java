@@ -6,8 +6,6 @@ import java.io.*;
 import java.net.InetAddress;
 import java.net.ServerSocket;
 import java.net.Socket;
-import java.net.UnknownHostException;
-import java.util.function.IntFunction;
 
 /**
  * @author Christp
@@ -18,14 +16,14 @@ import java.util.function.IntFunction;
  */
 
 /*
-*
-* 实现TCP的网络编程
-* 例子2：客户端发文件给服务端，服务端将文件保存在本地
-*/
+ *
+ * 实现TCP的网络编程
+ * 例子2：客户端发文件给服务端，服务端将文件保存在本地
+ */
 
 public class TCPTest02 {
     @Test
-    public void client(){
+    public void client() {
         Socket socket = null;
         OutputStream os = null;
         FileInputStream fis = null;
@@ -36,13 +34,13 @@ public class TCPTest02 {
             fis = new FileInputStream(new File("a94eafebdbf22ae350dd178b372ac26e.jpg"));
             byte[] buffer = new byte[1024];
             int len;
-            while ((len = fis.read(buffer)) != -1){
-                os.write(buffer,0, len);
+            while ((len = fis.read(buffer)) != -1) {
+                os.write(buffer, 0, len);
             }
         } catch (IOException e) {
             e.printStackTrace();
         } finally {
-            if (fis != null){
+            if (fis != null) {
                 try {
                     fis.close();
                 } catch (IOException e) {
@@ -50,7 +48,7 @@ public class TCPTest02 {
                 }
             }
 
-            if (os != null){
+            if (os != null) {
                 try {
                     os.close();
                 } catch (IOException e) {
@@ -58,7 +56,7 @@ public class TCPTest02 {
                 }
             }
 
-            if (socket != null){
+            if (socket != null) {
                 try {
                     socket.close();
                 } catch (IOException e) {
@@ -69,7 +67,7 @@ public class TCPTest02 {
     }
 
     @Test
-    public void server(){
+    public void server() {
         ServerSocket ss = null;
         Socket socket = null;
         InputStream is = null;
@@ -81,13 +79,13 @@ public class TCPTest02 {
             fos = new FileOutputStream(new File("cc1.jpg"));
             byte[] buffer = new byte[1024];
             int len;
-            while ((len = is.read(buffer)) != -1){
-                fos.write(buffer,0, len);
+            while ((len = is.read(buffer)) != -1) {
+                fos.write(buffer, 0, len);
             }
         } catch (IOException e) {
             e.printStackTrace();
         } finally {
-            if (fos != null){
+            if (fos != null) {
                 try {
                     fos.close();
                 } catch (IOException e) {
@@ -95,7 +93,7 @@ public class TCPTest02 {
                 }
             }
 
-            if (is != null){
+            if (is != null) {
                 try {
                     is.close();
                 } catch (IOException e) {
@@ -103,7 +101,7 @@ public class TCPTest02 {
                 }
             }
 
-            if (socket != null){
+            if (socket != null) {
                 try {
                     socket.close();
                 } catch (IOException e) {
@@ -111,7 +109,7 @@ public class TCPTest02 {
                 }
             }
 
-            if (ss != null){
+            if (ss != null) {
                 try {
                     ss.close();
                 } catch (IOException e) {

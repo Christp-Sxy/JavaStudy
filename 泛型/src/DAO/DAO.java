@@ -13,12 +13,12 @@ import java.util.List;
  */
 
 /*
-* DAO:data(base) access object
-*/
+ * DAO:data(base) access object
+ */
 
 public class DAO<T> {
     //添
-    public void add(T t){
+    public void add(T t) {
 
     }
 
@@ -37,21 +37,23 @@ public class DAO<T> {
 //    }
 
     //删
-    public boolean remove(T t){
+    public boolean remove(T t) {
         return false;
     }
+
     //改
-    public void update(T t){
+    public void update(T t) {
 
     }
+
     //查一
-    public T getIndex(int index){
+    public T getIndex(int index) {
 
         return null;
     }
     //查多
 
-    public List<T> getForIndex(int index){
+    public List<T> getForIndex(int index) {
 
         return null;
     }

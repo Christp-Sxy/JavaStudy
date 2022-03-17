@@ -13,29 +13,29 @@ import java.io.*;
  */
 
 /*
-* 处理流之一：缓冲流的使用
-* 1.缓冲流：
-*   BufferedInputStream
-*   BufferedOutputStream
-*   BufferedReader
-*   BufferedWriter
-*
-* 2.作用：提高数据的读取和写入效率
-*
-* 3.提高读写速度的原因：内部提供了一个缓冲区
-*
-* 4.处理流就是“套接”造已有的流的基础上的
-*
-*/
+ * 处理流之一：缓冲流的使用
+ * 1.缓冲流：
+ *   BufferedInputStream
+ *   BufferedOutputStream
+ *   BufferedReader
+ *   BufferedWriter
+ *
+ * 2.作用：提高数据的读取和写入效率
+ *
+ * 3.提高读写速度的原因：内部提供了一个缓冲区
+ *
+ * 4.处理流就是“套接”造已有的流的基础上的
+ *
+ */
 
 public class BufferedTest {
 
     /*
-    * 实现非文本文件的复制
-    */
+     * 实现非文本文件的复制
+     */
 
     @Test
-    public void testBufferedStream(){
+    public void testBufferedStream() {
         FileOutputStream fos = null;
         FileInputStream fis = null;
         BufferedInputStream bis = null;
@@ -65,7 +65,7 @@ public class BufferedTest {
         } finally {
             //4.流资源的关闭
             //要求：先关闭外层流，在关闭内层流
-            if (bos != null){
+            if (bos != null) {
                 try {
                     bos.close();
                 } catch (IOException e) {
@@ -73,7 +73,7 @@ public class BufferedTest {
                 }
             }
 
-            if (bis != null){
+            if (bis != null) {
                 try {
                     bis.close();
                 } catch (IOException e) {
@@ -104,7 +104,7 @@ public class BufferedTest {
     }
 
     //实现文件的复制的方法
-    public void copyFileWithBuffer(String srcPath, String destPath){
+    public void copyFileWithBuffer(String srcPath, String destPath) {
         FileOutputStream fos = null;
         FileInputStream fis = null;
         BufferedInputStream bis = null;
@@ -153,11 +153,11 @@ public class BufferedTest {
     }
 
     /*
-    * 使用BufferedReader和BufferedWriter实现文本文件的复制
-    */
+     * 使用BufferedReader和BufferedWriter实现文本文件的复制
+     */
 
     @Test
-    public void testBufferedReaderBufferedWriter(){
+    public void testBufferedReaderBufferedWriter() {
         BufferedReader br = null;
         BufferedWriter bw = null;
         try {
@@ -177,7 +177,7 @@ public class BufferedTest {
 
             //方式二：使用String
             String data;
-            while ((data = br.readLine()) != null){
+            while ((data = br.readLine()) != null) {
                 //方法一
 //                bw.write(data);//data中是包含换行符的
                 //方法二
@@ -188,7 +188,7 @@ public class BufferedTest {
             e.printStackTrace();
         } finally {
             //关闭资源
-            if (bw != null){
+            if (bw != null) {
                 try {
                     bw.close();
                 } catch (IOException e) {
@@ -196,7 +196,7 @@ public class BufferedTest {
                 }
             }
 
-            if (br != null){
+            if (br != null) {
                 try {
                     br.close();
                 } catch (IOException e) {

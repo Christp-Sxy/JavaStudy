@@ -1,0 +1,17 @@
+<component name="ArtifactManager">
+  <artifact type="exploded-war" build-on-make="true" name="JSP01:Web exploded">
+    <output-path>$PROJECT_DIR$/out/artifacts/JSP01_Web_exploded</output-path>
+    <root id="root">
+      <element id="javaee-facet-resources" facet="JSP01/web/Web" />
+      <element id="directory" name="WEB-INF">
+        <element id="directory" name="classes">
+          <element id="module-output" name="JSP01" />
+        </element>
+        <element id="directory" name="lib">
+          <element id="artifact" artifact-name="JSP01:jar" />
+        </element>
+      </element>
+      <element id="javaee-facet-resources" facet="JSP01/web/Web2" />
+    </root>
+  </artifact>
+</component>

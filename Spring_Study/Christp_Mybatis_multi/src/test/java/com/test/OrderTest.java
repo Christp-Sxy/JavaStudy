@@ -31,8 +31,8 @@ public class OrderTest {
         SqlSession sqlSession = sqlSessionFactory.openSession(true);
         OrderMapper mapper = sqlSession.getMapper(OrderMapper.class);
         List<Order> userList = mapper.findAll();
-        for (Order user:
-             userList) {
+        for (Order user :
+                userList) {
             System.out.println(user);
         }
         sqlSession.close();
@@ -45,7 +45,7 @@ public class OrderTest {
         SqlSession sqlSession = sqlSessionFactory.openSession(true);
         UserMapper mapper = sqlSession.getMapper(UserMapper.class);
         List<Info> infoList = mapper.findAll();
-        for (Info user:
+        for (Info user :
                 infoList) {
             System.out.println(user);
         }
@@ -59,8 +59,8 @@ public class OrderTest {
         SqlSession sqlSession = sqlSessionFactory.openSession(true);
         UserMapper mapper = sqlSession.getMapper(UserMapper.class);
         List<Users> usersList = mapper.findUserAndRoleAll();
-        for (Users us:
-             usersList) {
+        for (Users us :
+                usersList) {
             System.out.println(us);
         }
         sqlSession.close();
